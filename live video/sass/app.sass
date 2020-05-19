@@ -11,6 +11,7 @@ html
   scroll-behavior: smooth
   body
     display: flex
+    font-family: 'Nunito', sans-serif
 
 nav
   background-color: $lighter-gray
@@ -18,7 +19,6 @@ nav
   text-align: center
   height: 100vh
   border-right: 2px solid #AFAFB0
-  // position: fixed
 
 ul.navbar-list
   display: flex
@@ -116,16 +116,17 @@ p.title
   a
     margin-right: 30px
 
-video
+iframe
   display: block
   margin: auto
   margin-top: 30px
   font-family: inherit
   border-radius: 10px
   border: transparent
-  width: 83%
+  height: 300px
   &:focus
     outline: none
+
 
 .footer-stuff
   width: 83%
@@ -137,9 +138,14 @@ video
 
 .like-share
   display: flex
+  p
+    display: block
+    font-weight: 700
+    margin-top: 10px
 
 .ico-flex
   text-align: center
+  margin-left: 20px
 
 p.numbers
   display: inline-block
@@ -154,6 +160,33 @@ p.numbers
     font-size: 12px
   i
     margin: 0 5px
+
+.ico-flex
+  height: 45px
+  width: 45px
+  display: grid
+  place-items: center
+
+.whatsapp
+  border-radius: 50%
+  background-color: #25D366
+
+.fa-whatsapp
+  color: #fff
+
+.fa-facebook-official
+  color: #3b5998
+
+.instagram
+  background: #d6249f
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%)
+  border-radius: 10px
+
+.fa-instagram
+  color: #fff
+
+.fa-twitter
+  color: #00acee
 
 @media (max-width: 768px)
   body
@@ -170,23 +203,21 @@ p.numbers
     margin: auto
     li
       margin: 0
-      margin-left: 35px
-      margin-top: 20px
+      margin-left: 20px
 
   nav
     height: 10vh
+    display: grid
+    place-items: center
 
-  video
+  iframe
     width: 100%
     border-radius: 0
-    height: 200px
+    height: 400px
     margin: 0
 
   .hover
     height: 25vh
-
-  // .header-icons
-  //   display: none
 
   .video-container
     padding: 0
@@ -214,8 +245,15 @@ p.numbers
       margin-left: 10px
 
   .ico-flex
-    margin-top: 20px
-    margin-right: 40px
+    margin: 10px
 
   p.numbers
     display: block
+
+  .like-share
+    p
+      display: none
+
+@media (max-width: 414px)
+  iframe
+    height: 200px
