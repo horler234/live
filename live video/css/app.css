@@ -22,6 +22,10 @@ ul.navbar-list {
   flex-direction: column; }
   ul.navbar-list li {
     margin-top: 50px; }
+  ul.navbar-list li a {
+    color: #000000; }
+  ul.navbar-list li a i.active {
+    color: #6F14AB; }
 
 .hover {
   background-color: #CBCBD2;
@@ -202,6 +206,9 @@ p.numbers {
 
   nav {
     height: 10vh;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
     display: grid;
     place-items: center; }
 
@@ -212,13 +219,15 @@ p.numbers {
     margin: 0; }
 
   .hover {
-    height: 25vh; }
+    height: 500px;
+    margin-bottom: 50px; }
 
   .video-container {
     padding: 0; }
 
   .video-part {
-    height: 65vh;
+    height: auto;
+    overflow: none;
     background-color: #fff; }
 
   .part {
@@ -229,6 +238,9 @@ p.numbers {
 
   p.section-header {
     display: none; }
+
+  ul.navbar-list li a {
+    margin: 10px; }
 
   p.section-header.slide {
     display: block; }

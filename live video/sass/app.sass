@@ -26,6 +26,10 @@ ul.navbar-list
   flex-direction: column
   li
     margin-top: 50px
+  li a
+    color: #000000
+  li a i.active
+    color: $brand-purple
 
 .hover
   background-color: $light-gray
@@ -207,6 +211,9 @@ p.numbers
 
   nav
     height: 10vh
+    position: fixed
+    bottom: 0
+    z-index: 1
     display: grid
     place-items: center
 
@@ -217,13 +224,15 @@ p.numbers
     margin: 0
 
   .hover
-    height: 25vh
+    height: 500px
+    margin-bottom: 50px
 
   .video-container
     padding: 0
 
   .video-part
-    height: 65vh
+    height: auto
+    overflow: none
     background-color: #fff
     
   .part
@@ -234,6 +243,9 @@ p.numbers
 
   p.section-header
     display: none
+
+  ul.navbar-list li a
+    margin: 10px
 
   p.section-header.slide
     display: block
